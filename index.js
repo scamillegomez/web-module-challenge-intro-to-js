@@ -184,6 +184,7 @@ function hungryDog(weight, age){
 
 hungryDog(4,1);
 console.log(hungryDog(4,1));
+
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
@@ -205,10 +206,49 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
+
+const randindex = Math.floor(Math.random() * 3)
+
+let computer
+if (randindex === 0) {
+  computer = "rock"
+} else if (randindex === 1) {
+  computer = "paper"
+} else if (randindex ===2) {
+  computer = "scissors"
 }
 
+console.log(computer);
+
+function game(user, computer){
+  
+  var tie = "it's a tie"
+  var win = "you win!"
+  var lose = "you lose!"
+
+  let result
+  if (user === computer){
+    console.log(tie);
+    return tie;
+  } else if (user === "rock" && computer === "scissors") {
+    console.log(win);
+    return win;
+  } else if (user === "paper" && computer === "rock" ) {
+    console.log(win);
+    return win;
+  } else if (user === "scissors" && computer === "paper" ) {
+    console.log(win);
+    return win;
+  } else {
+    console.log(lose);
+    return lose;
+  }
+  
+}
+
+game("scissors",computer);
+
+console.log(computer);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
