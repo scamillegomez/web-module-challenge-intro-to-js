@@ -20,6 +20,13 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 25
+
+if (votingAge >= 18) {
+  console.log(true);
+} else {
+  console.log(false);
+}
 
 
 /*
@@ -35,8 +42,16 @@ Do the following:
 */
 
 
+let firstThing = 'dog'
 
+let secondThing = 'cat'
 
+if (firstThing != secondThing) {
+  firstThing = 'also a cat'
+  console.log(firstThing);
+} else {
+  console.log(firstThing);
+}
 
 /*
 Task 1c - Convert Strings to Numbers (not auto tested)
