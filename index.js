@@ -303,9 +303,27 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(count){
+  // let number = count
+  for ( i = count ; i > 0 ; i --){
+    console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`);
+    console.log(i);
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`
 }
+}
+annoyingSong(4);
+
+for (let i = 5 ; i > 0 ; i--){
+  console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`);
+}
+
+// for ( let i = count; i > 0 ; i--){
+//   annoyingSong(count);
+//   console.log(annoyingSong(count));
+//   var count = i;
+//   return count;
+// }
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
