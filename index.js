@@ -262,10 +262,13 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  const result1 = kilometers * 0.621371
+  console.log(result1);
+  return result1;
 }
 
+miles(2);
 
 
 //Task 5b - Centimeters to Feet
@@ -276,9 +279,13 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(centimeters){
+  const result2 = centimeters / 30.48
+  console.log(result2);
+  return result2;
 }
+
+feet(45);
 
 
 
