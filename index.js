@@ -64,7 +64,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+let testobj = '1999'
 
+console.log(+testobj);
 
 
 /*
@@ -80,6 +82,14 @@ function multiply(num1, num2){
   return num1 * num2;
 }
 
+multiply(1,2);
+
+function multiplyAgain(a, b){
+  return a * b;
+}
+
+const newresult = multiplyAgain(1,2);
+console.log(newresult);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -92,10 +102,13 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(dogAge){
+  const newAge = dogAge * 7
+  console.log(newAge);
+  return newAge;
 }
 
+dogYears(4);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -119,7 +132,7 @@ Adult Dogs 1 year and older
    > 15lbs - 2% of their body weight 
 
 Puppies less than 1 year
-   2 - 4 months 10% of their body weight
+   2 - 4 months 10% of their body weight ()
    4 - 7 months 5% of their body weight 
    7 - 12 months 4% of their body weight
   
@@ -144,12 +157,33 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  const tenperc = weight * 0.1
+  const fiveperc = weight * 0.05
+  const fourperc = weight * 0.04
+  const threeperc = weight * 0.03
+  const twoperc = weight * 0.02
+  if(age >= 0.17 && age < 0.33){
+    return tenperc;
+  } else if (age >= 0.33 && age < 0.58) {
+    return fiveperc;
+  } else if (age >= 0.58 && age < 1) {
+    return fourperc;
+  } else if (age >= 1 && weight <= 5) {
+    return fiveperc;
+  } else if (age >= 1 && weight >= 6 && weight <= 10) {
+    return fourperc;
+  } else if (age >= 1 && weight >= 11 && weight <= 15) {
+    return threeperc;
+  } else if (age >= 1 && weight >= 15) {
+    return twoperc;
+  } else {
+    0.00;
+  }
 }
 
-
-
+hungryDog(4,1);
+console.log(hungryDog(4,1));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
